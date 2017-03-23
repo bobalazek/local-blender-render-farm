@@ -13,11 +13,14 @@
     "publish": null
   },
   "dependencies": {
-    "fs-jetpack": "^0.12.0"
+    "fs-jetpack": "^0.12.0",
+    "tree-kill": "^1.1.0"
   },
   "devDependencies": {
-    "electron": "^1.6.2",
+    "electron": "^1.6.4",
     "electron-builder": "^16.2.0",
+    "electron-rebuild": "^1.5.7",
+    "eslint": "^3.18.0",
     "gulp": "^3.9.1",
     "gulp-batch": "^1.0.5",
     "gulp-less": "^3.3.0",
@@ -25,14 +28,6 @@
     "gulp-watch": "^4.3.11",
     "ip": "^1.1.5",
     "minimist": "^1.2.0",
-    "gulp": "^3.9.1",
-    "gulp-batch": "^1.0.5",
-    "gulp-less": "^3.3.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-watch": "^4.3.11",
-    "minimist": "^1.2.0",
-    "rollup": "^0.41.6",
-    "source-map-support": "^0.4.14",
     "printf": "^0.2.5",
     "rollup": "^0.41.6",
     "source-map-support": "^0.4.14",
