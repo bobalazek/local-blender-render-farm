@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn Integrity file
+.yarn-integrity
+
+# OSX
+.DS_Store
+Thumbs.db
+
+# Dist/Build
+build/
+dist/
+
+# Data
+data/
+!data/test.blend
+
+# App
+app/stylesheets
+app/app.js
+app/background.js
+app/env.json
+app/**/*.map

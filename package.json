@@ -1,0 +1,52 @@
+{
+  "name": "local-blender-render-farm",
+  "version": "0.1.0",
+  "description": "Your local blender render farm.",
+  "main": "app/background.js",
+  "build": {
+    "appId": "com.bobalazek.local-blender-render-farm",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "publish": null
+  },
+  "dependencies": {
+    "fs-jetpack": "^0.12.0"
+  },
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^16.2.0",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-watch": "^4.3.11",
+    "ip": "^1.1.5",
+    "minimist": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-watch": "^4.3.11",
+    "minimist": "^1.2.0",
+    "rollup": "^0.41.6",
+    "source-map-support": "^0.4.14",
+    "printf": "^0.2.5",
+    "rollup": "^0.41.6",
+    "source-map-support": "^0.4.14",
+    "ssh2": "^0.5.4"
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "build": "gulp build",
+    "prerelease": "gulp build --env=production",
+    "release": "build",
+    "start": "gulp start",
+    "pretest": "gulp build-unit --env=test"
+  },
+  "repository": "https://github.com/bobalazek/local-blender-render-farm",
+  "author": "Borut Balazek <bobalazek124@gmail.com>",
+  "license": "MIT"
+}
