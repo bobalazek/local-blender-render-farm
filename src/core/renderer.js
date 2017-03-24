@@ -16,14 +16,17 @@ export class AppRenderer {
         this.pythonScriptPath = this.tmpDir + '/tmp_python.py';
         this.pythonScript = `import bpy
 for scene in bpy.data.scenes:
-    scene.render.use_border = True
-    #scene.render.use_crop_to_border = True
+    scene.render.use_border = %s
+    scene.render.use_crop_to_border = %s
     scene.render.border_min_x = %.4f
     scene.render.border_max_x = %.4f
     scene.render.border_min_y = %.4f
     scene.render.border_max_y = %.4f
-    #scene.render.tile_x = %d
-    #scene.render.tile_y = %d
+    scene.render.tile_x = %d
+    scene.render.tile_y = %d
+    scene.render.resolution_percentage = %.4f
+    scene.render.resolution_x = %d
+    scene.render.resolution_y = %d
 bpy.ops.render.render()`;
         
         this.blender = {
@@ -33,12 +36,17 @@ bpy.ops.render.render()`;
         };
 
         this.sceneOptions = {
+            useBorder: true,
+            useCropToBorder: true,
             minX: 0,
             maxX: 1,
             minY: 0,
             maxY: 1,
             tileX: 32,
             tileY: 32,
+            resolutionPercentage: 100,
+            resolutionX: 1920,
+            resolutionY: 1080,
         };
         
         // Process
@@ -56,12 +64,17 @@ bpy.ops.render.render()`;
             this.pythonScriptPath,
             printf(
                 this.pythonScript,
+                this.sceneOptions.useBorder ? 'True' : 'False',
+                this.sceneOptions.useCropToBorder ? 'True' : 'False',
                 this.sceneOptions.minX,
                 this.sceneOptions.maxX,
                 this.sceneOptions.minY,
                 this.sceneOptions.maxY,
                 this.sceneOptions.tileX,
-                this.sceneOptions.tileY
+                this.sceneOptions.tileY,
+                this.sceneOptions.resolutionPercentage,
+                this.sceneOptions.resolutionX,
+                this.sceneOptions.resolutionY,
             )
         );
     }

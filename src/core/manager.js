@@ -50,6 +50,7 @@ export class AppManager {
                     ? 'C:\Program Files\Blender Foundation\Blender\Blender.exe'
                     : ''
                 ));
+        this.currentMachine.cpuSpeed = null; // TODO
     
         return this.currentMachine;
     }
