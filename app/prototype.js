@@ -34,7 +34,8 @@ const currentMachine = {
 // http://blender.stackexchange.com/questions/3082/specify-tile-size-for-blender-cycles-rendering-via-command-line
 // https://arachnoid.com/python/blender_network_render/
 // https://docs.blender.org/api/blender_python_api_2_77_0/bpy.types.RenderSettings.html
-// https://docs.blender.org/manual/it/dev/render/workflows/command_line.html
+// https://docs.blender.org/manual/en/dev/render/workflows/command_line.html
+// https://docs.blender.org/manual/en/dev/advanced/command_line/arguments.html
 let blenderSettings = {
     output_path:  __dirname,
     format: 'PNG',
