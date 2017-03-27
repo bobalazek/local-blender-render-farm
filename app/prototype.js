@@ -39,6 +39,8 @@ const currentMachine = {
 // https://github.com/WARP-LAB/Blender-Network-Render-Additions
 // http://blender.stackexchange.com/questions/28480/how-do-i-force-the-netrender-to-render-everything-on-gpu
 // http://blender.stackexchange.com/questions/5281/blender-sets-compute-device-cuda-but-doesnt-use-it-for-actual-render-on-ec2
+// https://docs.blender.org/api/blender_python_api_current/bpy.types.Scene.html?highlight=scene%20cycles#bpy.types.Scene.cycles
+// https://docs.blender.org/api/blender_python_api_current/bpy.types.CyclesRenderSettings.html#bpy.types.CyclesRenderSettings
 let blenderSettings = {
     output_path:  __dirname,
     format: 'PNG',
