@@ -38,6 +38,7 @@ const currentMachine = {
 // https://docs.blender.org/manual/en/dev/advanced/command_line/arguments.html
 // https://github.com/WARP-LAB/Blender-Network-Render-Additions
 // http://blender.stackexchange.com/questions/28480/how-do-i-force-the-netrender-to-render-everything-on-gpu
+// http://blender.stackexchange.com/questions/5281/blender-sets-compute-device-cuda-but-doesnt-use-it-for-actual-render-on-ec2
 let blenderSettings = {
     output_path:  __dirname,
     format: 'PNG',
