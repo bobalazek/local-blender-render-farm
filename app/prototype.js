@@ -36,6 +36,8 @@ const currentMachine = {
 // https://docs.blender.org/api/blender_python_api_2_77_0/bpy.types.RenderSettings.html
 // https://docs.blender.org/manual/en/dev/render/workflows/command_line.html
 // https://docs.blender.org/manual/en/dev/advanced/command_line/arguments.html
+// https://github.com/WARP-LAB/Blender-Network-Render-Additions
+// http://blender.stackexchange.com/questions/28480/how-do-i-force-the-netrender-to-render-everything-on-gpu
 let blenderSettings = {
     output_path:  __dirname,
     format: 'PNG',
