@@ -41,6 +41,7 @@ const currentMachine = {
 // http://blender.stackexchange.com/questions/5281/blender-sets-compute-device-cuda-but-doesnt-use-it-for-actual-render-on-ec2
 // https://docs.blender.org/api/blender_python_api_current/bpy.types.Scene.html?highlight=scene%20cycles#bpy.types.Scene.cycles
 // https://docs.blender.org/api/blender_python_api_current/bpy.types.CyclesRenderSettings.html#bpy.types.CyclesRenderSettings
+// http://blender.stackexchange.com/questions/6769/no-file-output-after-rendering
 let blenderSettings = {
     output_path:  __dirname,
     format: 'PNG',
@@ -56,9 +57,9 @@ for scene in bpy.data.scenes:
     scene.render.border_max_x = %.4f
     scene.render.border_min_y = %.4f
     scene.render.border_max_y = %.4f
-    #scene.render.tile_x = 32
-    #scene.render.tile_y = 32
-bpy.ops.render.render()`;
+    scene.render.tile_x = 32
+    scene.render.tile_y = 32
+bpy.ops.render.render(write_still=True)`;
 
 /***** Prepare current machine *****/
 function prepareCurrentMachine() {
